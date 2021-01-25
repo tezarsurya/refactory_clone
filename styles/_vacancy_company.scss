@@ -11,6 +11,10 @@
   @include breakpoint-up(md) {
     height: 380px;
   }
+
+  @include breakpoint-up(lg) {
+    transform: skew(0, -1deg);
+  }
 }
 
 .company__container {
@@ -58,19 +62,9 @@
     }
   }
 
-  @include breakpoint-up(md) {
-    &::before {
-      content: " ";
-      height: 40px;
-      top: -30px;
-    }
-
+  @include breakpoint-up(lg) {
     &::after {
-      width: 100%;
-      background-color: #0fb2cf;
-      transform: skew(0, 5deg);
-      height: 50px;
-      bottom: 15px;
+      transform: skew(0, 3.5deg);
     }
   }
 
@@ -133,12 +127,6 @@
 
       h2 {
         font-size: 32px;
-        text-align: left;
-        flex: 1;
-      }
-
-      .header__info {
-        margin-right: 2rem;
       }
     }
   }
@@ -158,9 +146,7 @@
     }
 
     @include breakpoint-up(md) {
-      flex-direction: row;
       width: 88%;
-      align-items: flex-start;
     }
   }
 }
@@ -296,9 +282,6 @@
   }
 
   @include breakpoint-up(md) {
-    flex-direction: row;
-    align-items: flex-start;
-
     &__logo {
       width: auto;
       margin-left: 3rem;
