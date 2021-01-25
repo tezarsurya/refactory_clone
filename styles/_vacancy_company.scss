@@ -1,17 +1,11 @@
 .vacancy_company {
   display: flex;
   width: 100vw;
-  height: 98vh;
+  // height: 98vh;
   transform: skew(0, -2deg);
 
-  @include breakpoint-down(xxs) {
-    @include mobile-vertical-down(xxs) {
-      height: 145vh;
-    }
-
-    @include mobile-vertical-up(xxs) {
-      height: 110vh;
-    }
+  @include breakpoint-up(sm) {
+    height: 400px;
   }
 
   @include breakpoint-up(md) {
@@ -46,6 +40,22 @@
     bottom: -20px;
     transform: skew(0, 2deg);
     z-index: -1;
+  }
+
+  @include breakpoint-up(sm) {
+    &::before {
+      content: " ";
+      height: 40px;
+      top: -30px;
+    }
+
+    &::after {
+      width: 100%;
+      background-color: #0fb2cf;
+      transform: skew(0, 5deg);
+      height: 50px;
+      bottom: 15px;
+    }
   }
 
   @include breakpoint-up(md) {
@@ -98,6 +108,23 @@
       font-size: 16px;
     }
 
+    @include breakpoint-up(sm) {
+      flex-direction: row;
+      width: 96%;
+      margin-top: 0;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 24px;
+        text-align: left;
+        flex: 1;
+      }
+
+      .header__info {
+        margin-right: 2rem;
+      }
+    }
+
     @include breakpoint-up(md) {
       flex-direction: row;
       width: 82%;
@@ -123,6 +150,12 @@
     align-items: center;
     width: 90%;
     transform: skew(0, 2deg);
+
+    @include breakpoint-up(sm) {
+      flex-direction: row;
+      width: 98%;
+      align-items: flex-start;
+    }
 
     @include breakpoint-up(md) {
       flex-direction: row;
@@ -210,6 +243,58 @@
     }
   }
 
+  @include breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: flex-start;
+
+    &__logo {
+      width: auto;
+      margin-left: 0.5rem;
+
+      img {
+        width: auto;
+      }
+
+      .update_time {
+        width: 80%;
+
+        i {
+          flex: 1;
+        }
+
+        span {
+          text-align: center;
+        }
+      }
+    }
+
+    &__details {
+      margin-top: 0;
+      margin-left: 0.5rem;
+
+      h2 {
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+      }
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+      }
+
+      .position_salary {
+        p {
+          font-size: 16px;
+        }
+      }
+
+      table {
+        width: 80%;
+        font-weight: 500;
+      }
+    }
+  }
+
   @include breakpoint-up(md) {
     flex-direction: row;
     align-items: flex-start;
@@ -286,11 +371,18 @@
     text-decoration: underline;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+    margin-bottom: 2rem;
 
     span {
       height: 20px;
       margin-left: 0.5rem;
     }
+  }
+
+  @include breakpoint-up(sm) {
+    margin-top: 0;
+    width: 50%;
+    margin-right: 0.5rem;
   }
 
   @include breakpoint-up(md) {

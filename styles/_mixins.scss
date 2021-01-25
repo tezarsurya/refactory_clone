@@ -1,9 +1,14 @@
 $breakpoints-up: (
   "xxs": 376px,
+  //small phone
   "xs": 425px,
+  //phone
   "sm": 768px,
+  //tablet
   "md": 1024px,
+  //small laptop / tablet
   "lg": 1400px,
+  //large laptop
 );
 
 $breakpoints-down: (
@@ -16,10 +21,12 @@ $breakpoints-down: (
 
 $mobile-up: (
   "xxs": 641px,
+  "md": 800,
 );
 
 $mobile-down: (
   "xxs": 640px,
+  "md": 799,
 );
 
 @mixin breakpoint-up($size) {
