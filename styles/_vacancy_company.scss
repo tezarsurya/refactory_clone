@@ -4,6 +4,16 @@
   height: 95vh;
   transform: skew(0, -2deg);
 
+  @include breakpoint-down(xxs) {
+    @include mobile-vertical-down(xxs) {
+      height: 130vh;
+    }
+
+    @include mobile-vertical-up(xxs) {
+      height: 105vh;
+    }
+  }
+
   @include breakpoint-up(md) {
     height: 380px;
   }

@@ -60,6 +60,10 @@
         &:visited {
           text-decoration: none;
         }
+
+        @include breakpoint-down(xxs) {
+          font-size: 16px;
+        }
       }
     }
 

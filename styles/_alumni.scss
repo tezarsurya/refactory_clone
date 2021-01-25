@@ -265,6 +265,12 @@
       }
     }
 
+    @include breakpoint-down(xxs) {
+      @include mobile-vertical-down(xxs) {
+        height: 215vh;
+      }
+    }
+
     @include breakpoint-up(md) {
       height: 127vh;
     }
