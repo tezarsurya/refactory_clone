@@ -271,7 +271,7 @@ body {
 
 @media (max-width: 375px) and (max-height: 640px) {
   .vacancy_company {
-    height: 135vh;
+    height: 145vh;
   }
 }
 

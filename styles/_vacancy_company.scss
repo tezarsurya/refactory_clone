@@ -6,7 +6,7 @@
 
   @include breakpoint-down(xxs) {
     @include mobile-vertical-down(xxs) {
-      height: 135vh;
+      height: 145vh;
     }
 
     @include mobile-vertical-up(xxs) {
