@@ -1,0 +1,160 @@
+.hero {
+  @include breakpoint-up(md) {
+    background-position: top right;
+    height: 80vh;
+  }
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 820px;
+  background-image: url("../assets/Screenshot\ 2021-01-21\ 192454.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  // hero__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    @include breakpoint-up(md) {
+      width: 80%;
+    }
+  }
+
+  // hero__navigation
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    .brand {
+      margin-top: 1.5rem;
+
+      img {
+        width: 143px;
+      }
+    }
+
+    // hero__navigation__menu
+    &__menu {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      a {
+        margin: 2rem 0.5rem 1rem 0.5rem;
+        font-size: 18px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          color: #f57d25;
+        }
+
+        &:visited {
+          text-decoration: none;
+        }
+      }
+    }
+
+    @include breakpoint-up(md) {
+      margin-top: 2rem;
+      margin-right: 1rem;
+      flex-direction: row;
+      align-items: center;
+
+      .brand {
+        flex: 1;
+        margin-top: 0;
+      }
+
+      &__menu {
+        justify-content: flex-end;
+        margin-top: 1rem;
+
+        a {
+          margin: 0 0.5rem 0 0.5rem;
+        }
+      }
+    }
+  }
+
+  // hero__heading
+  &__heading {
+    font-family: "Raleway", sans-serif;
+    margin-top: 2rem;
+    margin-left: 1rem;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      color: #e48800;
+      margin-top: 0;
+    }
+
+    @include breakpoint-up(md) {
+      margin-top: 2.8rem;
+      margin-left: 1.5rem;
+      h1 {
+        font-size: 36px;
+      }
+
+      span {
+        font-size: 36px;
+      }
+    }
+  }
+
+  // hero__text
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    margin: 1rem 1rem 0 1rem;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.8rem;
+
+    @include breakpoint-up(md) {
+      margin: 1rem 1rem 0 1.5rem;
+      font-size: 16px;
+      width: 70%;
+    }
+  }
+
+  // hero__cta
+  &__cta {
+    display: flex;
+    margin: 1rem 0 0 1rem;
+    font-weight: 500;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+
+    span {
+      margin-left: 1rem;
+    }
+
+    @include breakpoint-up(md) {
+      margin: 1rem 0 0 1.5rem;
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}

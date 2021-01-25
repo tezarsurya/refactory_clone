@@ -1,0 +1,43 @@
+.btn-cta-solid {
+  background-color: #e48800;
+  color: #fff;
+  border-radius: 10px;
+  outline: none !important;
+
+  &:hover {
+    color: #fff;
+    background-color: #ff9800;
+  }
+
+  &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-cta-outlined {
+  border: #e48800 2px solid;
+  color: #fff;
+  border-radius: 10px;
+  outline: none !important;
+
+  &:hover {
+    color: #fff;
+    background-color: #ff9800;
+  }
+
+  &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
