@@ -1,0 +1,92 @@
+.knowledge_sharing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background-image: url("../assets/Screenshot\ 2021-01-23\ 160141.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  h1 {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    width: 75%;
+    text-align: center;
+
+    @include breakpoint-up(md) {
+      font-size: 48px;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: #718096;
+    letter-spacing: 0.2rem;
+    font-size: 20px;
+    font-weight: 300;
+
+    @include breakpoint-up(sm) {
+      font-size: 24px;
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      text-decoration: none;
+      color: #e48800;
+    }
+
+    i {
+      margin-left: 0.5rem;
+    }
+  }
+
+  #posts_carousel {
+    width: 85%;
+    margin-bottom: 6rem;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .carousel-inner {
+      border-radius: 10px !important;
+    }
+
+    #desktop-card {
+      display: none;
+
+      .carousel-item {
+        margin-left: 2rem;
+        img {
+          width: 30%;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    @include breakpoint-up(sm) {
+      margin-bottom: 8rem;
+
+      #mobile-card {
+        display: none;
+      }
+
+      #desktop-card {
+        display: flex;
+      }
+    }
+  }
+
+  @include breakpoint-up(sm) {
+    padding-top: 4rem;
+  }
+}

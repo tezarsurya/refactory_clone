@@ -1,0 +1,123 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c162a;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 3rem;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      color: #eaeaea;
+      margin-bottom: 2rem;
+      line-height: 1.5rem;
+
+      h3 {
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: #eaeaea;
+        font-size: 14px;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        span {
+          padding: 0.2rem 0.5rem;
+          background-color: #f57d25;
+        }
+      }
+
+      @include breakpoint-up(sm) {
+        margin-right: 5rem;
+      }
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint-up(sm) {
+        flex-direction: row;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+
+      .social_icons {
+        display: flex;
+        margin-bottom: 3rem;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          background-color: #35b4ae;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .address_contact {
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint-up(sm) {
+          flex-direction: row;
+
+          .block {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+
+    @include breakpoint-up(md) {
+      flex-direction: row;
+      width: 80%;
+    }
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    width: 100%;
+    border-top: 1px solid #fff;
+    color: #eaeaea;
+
+    span {
+      width: 80%;
+      text-align: center;
+
+      a {
+        color: #eaeaea;
+        text-decoration: underline;
+      }
+
+      @include breakpoint-up(sm) {
+        width: 90%;
+      }
+
+      @include breakpoint-up(md) {
+        width: 80%;
+        text-align: left;
+      }
+    }
+  }
+}

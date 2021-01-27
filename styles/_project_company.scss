@@ -1,0 +1,265 @@
+.project_company {
+  width: 100%;
+  transform: skew(0, 2deg);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0c162a;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 10px;
+      background-color: #e48800;
+      transform: skew(0, -4deg);
+      z-index: -1;
+      display: none;
+
+      @include breakpoint-up(sm) {
+        display: block;
+      }
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      bottom: -60px;
+      background-color: #e48800;
+      transform: skew(0, -5deg);
+      z-index: -1;
+
+      @include breakpoint-up(sm) {
+        display: none;
+      }
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      transform: skew(0, -2deg);
+
+      h2 {
+        color: #8d8d8d;
+        font-size: 24px;
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(md) {
+          font-family: "Raleway", sans-serif;
+          font-size: 32px;
+        }
+      }
+
+      a {
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: underline;
+
+        span {
+          margin-left: 0.5rem;
+        }
+      }
+
+      @include breakpoint-up(sm) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95%;
+        margin-bottom: 1rem;
+      }
+
+      @include breakpoint-up(md) {
+        width: 80%;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      transform: skew(0, -2deg);
+
+      .company__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #898989;
+        width: 50%;
+        margin-bottom: 2rem;
+
+        img {
+          margin-bottom: 1rem;
+        }
+
+        .updated_at {
+          display: flex;
+          justify-content: space-around;
+          font-family: "Montserrat", sans-serif;
+          font-size: 12px;
+          width: 100%;
+
+          i {
+            font-size: 20px;
+          }
+
+          @include breakpoint-up(md) {
+            font-size: 16px;
+          }
+        }
+
+        @include breakpoint-up(sm) {
+          width: auto;
+        }
+      }
+
+      .project__details {
+        margin-bottom: 1.5rem;
+
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          color: #f1f1f1;
+          font-size: 20px;
+
+          @include breakpoint-up(md) {
+            font-size: 22px;
+          }
+        }
+
+        h3 {
+          font-size: 16px;
+          color: #767d86;
+          margin-bottom: 1.5rem;
+
+          @include breakpoint-up(md) {
+            font-size: 18px;
+          }
+        }
+
+        .project_type {
+          display: flex;
+          width: 90%;
+
+          span {
+            margin-right: 1rem;
+            margin-top: 0.5rem;
+
+            @include breakpoint-up(md) {
+              margin-top: 0;
+            }
+          }
+
+          p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: #e1e1e1;
+
+            @include breakpoint-up(md) {
+              font-size: 18px;
+            }
+          }
+
+          @include breakpoint-up(md) {
+            width: 100%;
+          }
+        }
+
+        table {
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          width: 100%;
+
+          tr {
+            td {
+              padding: 0.5rem 0.5rem 0.5rem 0;
+              vertical-align: top;
+
+              &:nth-child(1) {
+                color: #5d636b;
+              }
+
+              &:nth-child(2) {
+                color: #e1e1e1;
+              }
+            }
+          }
+
+          @include breakpoint-up(md) {
+            font-size: 18px;
+          }
+        }
+
+        @include breakpoint-up(sm) {
+          margin-left: 1rem;
+        }
+      }
+
+      .project__buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 5rem;
+
+        .enroll-btn,
+        .call-btn {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          span {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 1rem;
+          }
+
+          button {
+            margin-bottom: 2rem;
+          }
+
+          @include breakpoint-up(md) {
+            width: 40%;
+          }
+        }
+
+        @include breakpoint-up(sm) {
+          width: 30%;
+        }
+
+        @include breakpoint-up(md) {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          width: 45%;
+          height: 100%;
+          margin-top: 5rem;
+          margin-bottom: 0;
+        }
+      }
+
+      @include breakpoint-up(sm) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 95%;
+        margin-bottom: 2rem;
+      }
+
+      @include breakpoint-up(md) {
+        justify-content: space-evenly;
+        width: 85%;
+      }
+    }
+  }
+}
